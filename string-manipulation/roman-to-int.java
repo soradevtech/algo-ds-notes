@@ -9,7 +9,7 @@ class Solution {
         rMap.put('L', 50);
         rMap.put('C', 100);
         rMap.put('D', 500);
-        rMap.put('M', 1000);"
+        rMap.put('M', 1000);
         
         // Declare an output variable 
         int rInt = 0;
