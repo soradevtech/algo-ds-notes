@@ -6,6 +6,8 @@
  *     ListNode(int x) { val = x; }
  * }
  */
+
+// Iterative solution, O(n) runtime complexity(?)
 class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode prev = null;
@@ -20,5 +22,21 @@ class Solution {
         }
         
         return prev;
+    }
+}
+
+// Recursive Solution, O(n) runtime complexity
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        if(head == null || head.next == null) {
+            return head;
+        }
+        
+        ListNode returnReversedList = reverseList(head.next);
+        
+        head.next.next = head;
+        head.next = null;
+        
+        return returnReversedList;
     }
 }
